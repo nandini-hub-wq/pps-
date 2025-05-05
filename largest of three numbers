@@ -1,0 +1,14 @@
+import cmath
+a = float(input("a: "))
+b = float(input("b: "))
+c = float(input("c: "))
+quad= (b**2) - (4*a*c)
+root1 =(-b+cmath.sqrt(quad))/(2*a)
+root2=(-b-cmath.sqrt(quad))/(2*a)
+if(quad>0):
+	print(f"The roots are: {root1.real:.2f} and {root2.real:.2f}")
+elif (quad==0):
+	print(f"The root is: {root1.real:.2f}")
+else:
+	real_part= -0.00 if b==0 else root1.real
+	print(f"The roots are: {real_part:.2f}{root1.imag:+.2f}j and {root2.real:.2f}{root2.imag:+.2f}j")
